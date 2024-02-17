@@ -3,7 +3,6 @@ from sklearn.metrics.pairwise import cosine_similarity
 from transformers import BertTokenizer, BertModel
 import torch
 import numpy as np
-import os
 
 def grab_relevant_information(user_question, df_chunk_tokens):
   #tokenize and embed input
