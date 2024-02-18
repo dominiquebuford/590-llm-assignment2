@@ -34,7 +34,7 @@ def generate_response(client, user_question, gathered_text):
     completion = client.chat.completions.create(
     model="gpt-3.5-turbo",
     messages=[
-        {"role": "system", "content": f"You are answering the user's question as best you can, according to this information {gathered_text} about Duke's Black history. if you cannot create an accurate answer, tell the user you don't have availability to that information"},
+        {"role": "system", "content": f"You are answering the user's question as best you can, according to this information {gathered_text} about the origins of Duke University's Black Studies program. if you cannot create an accurate answer, tell the user you don't have availability to that information"},
         {"role": "user", "content": f"{user_question}"}
   ]
   )
@@ -45,7 +45,7 @@ def generate_response_noRAG(client, user_question):
     completion = client.chat.completions.create(
     model="gpt-3.5-turbo",
     messages=[
-        {"role": "system", "content": f"You are answering the user's question as best you can about Duke's Black history. if you cannot create an accurate answer, tell the user you don't have availability to that information"},
+        {"role": "system", "content": f"You are answering the user's question as best you can about the origins of Duke University's Black Studies program. if you cannot create an accurate answer, tell the user you don't have availability to that information"},
         {"role": "user", "content": f"{user_question}"}
   ]
   )
