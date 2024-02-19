@@ -92,7 +92,6 @@ def main(local_dir = os.getcwd()):
     df_chunks_embeddings = create_datatable(output_path)
     if button:
         top_info = grab_relevant_information(user_input, df_chunks_embeddings)
-        os.environ['OPENAI_API_KEY'] = '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'
         client = OpenAI()
         RAG_response = generate_response(client, user_input, top_info)
         no_RAG_response = generate_response_noRAG(client, user_input)
