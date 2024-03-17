@@ -61,7 +61,7 @@ def store_pinecone(df):
     Parameters:
         df(DataFrame): dataframe containing embeddings and associated text.
     """
-    pc = Pinecone(api_key="17944aa6-d5f5-48f6-843a-aa1e79415857")
+    
     index = pc.Index("590-llm-project")
     tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
     for i, row in df.iterrows():
